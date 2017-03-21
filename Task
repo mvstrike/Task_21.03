@@ -1,0 +1,33 @@
+Class A
+{
+public:
+	void public_A(){}
+protected:
+	void proteceted_A(){}
+private;
+	void private_A(){}
+}
+
+Class B: public A{};
+Class B: protected A{};
+Class B: private A{}';
+
+int main()
+{
+A a;
+B b;
+C c;
+D d;
+a.public_A(); //доступен всем 
+a.protected_A();//доступен дочерним и базовому класссу
+a.private_A();//доступен только базовому классу
+b.public_A();
+b.protected_A();
+//b.private_A();
+c.public_A();
+//c.private_A();
+c.protected_A();
+//d.private_A();
+d.public_A();
+d.protected_A();
+}
